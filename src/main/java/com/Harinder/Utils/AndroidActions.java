@@ -12,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class AndroidActions extends AppiumUtils{
-	
+	//added comment in AndroidActions
 	AndroidDriver driver;
 	public AndroidActions(AndroidDriver driver) {
 		this.driver = driver;

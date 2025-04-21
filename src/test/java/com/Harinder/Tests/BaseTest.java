@@ -18,7 +18,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 public class BaseTest extends AppiumUtils {
-
+	//added comment in the BaseTest
 	public AndroidDriver driver;
 
 	FormPage formPage;
