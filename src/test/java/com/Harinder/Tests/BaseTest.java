@@ -41,6 +41,7 @@ public class BaseTest extends AppiumUtils {
 
 		service = startAppiumServer(ipAddress, Integer.parseInt(port));
 
+
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName(properties.getProperty("AndroidDeviceName"));
 		options.setApp(

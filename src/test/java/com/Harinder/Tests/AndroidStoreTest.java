@@ -28,6 +28,8 @@ import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
+import static java.lang.Thread.sleep;
+
 public class AndroidStoreTest extends BaseTest {
 	
 	//browser stack
@@ -48,12 +50,13 @@ public class AndroidStoreTest extends BaseTest {
 //There are 3 different ways to run test in this class, thats why used enabled = false becoz at a time, I will use 1 way of ruuning test
 	@Test(enabled = true)
 	public void fillForm() throws InterruptedException {
-		formPage.setNameField("Harinder Kaur");
+		formPage.setNameField("Harinder");
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
 		ProductCatalogue productCatalogue = formPage.submitForm();
 		productCatalogue.addItemToCartByIndex(0);
-		productCatalogue.addItemToCartByIndex(0);
+		//scrollToText("Air Jordan 1 Mid SE");
+		//productCatalogue.addItemToCartByIndex(0);
 		CartPage cartPage = productCatalogue.goToCartPage();
 		double totalSum = cartPage.getProductsSum();
 		double displayFormattedSum = cartPage.getTotalAmountDisplayed();

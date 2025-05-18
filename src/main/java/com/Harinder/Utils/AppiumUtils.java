@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
+import io.appium.java_client.AppiumBy;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
@@ -25,6 +26,8 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public abstract class AppiumUtils {
 	public AppiumDriverLocalService service;
+	AndroidDriver driver;
+
 	// AppiumDriver works for both Android and IOS
 
 	public AppiumDriverLocalService startAppiumServer(String ipAddress, int port) {
@@ -72,5 +75,9 @@ public abstract class AppiumUtils {
 		FileUtils.copyFile(source, new File(destinationFile));
 		return destinationFile;
 		//1.ccaptureand place in folder //2. extent report pick file and attach to report
+	}
+
+	public void scrollToText(String text) {
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"))"));
 	}
 }
