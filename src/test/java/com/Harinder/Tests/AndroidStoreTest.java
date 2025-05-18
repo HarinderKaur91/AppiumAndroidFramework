@@ -46,7 +46,7 @@ public class AndroidStoreTest extends BaseTest {
 	}
 
 //There are 3 different ways to run test in this class, thats why used enabled = false becoz at a time, I will use 1 way of ruuning test
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void fillForm() throws InterruptedException {
 		formPage.setNameField("Harinder Kaur");
 		formPage.setGender("female");
@@ -81,7 +81,7 @@ public class AndroidStoreTest extends BaseTest {
 
 	// getting data from dataprovider which further is reading fom json file and
 	// storing ot hashmap
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData",enabled = false)
 	public void fillFormUsingJson(HashMap<String, String> input) throws InterruptedException {
 		formPage.setNameField(input.get("name"));
 		formPage.setGender(input.get("gender"));
