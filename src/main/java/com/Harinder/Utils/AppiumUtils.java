@@ -26,7 +26,10 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public abstract class AppiumUtils {
 	public AppiumDriverLocalService service;
 	// AppiumDriver works for both Android and IOS
-//commnet added in feature2
+	//commnet added in feature2
+	//added comment in harinder branch
+
+
 	public AppiumDriverLocalService startAppiumServer(String ipAddress, int port) {
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(
