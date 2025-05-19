@@ -12,6 +12,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class CartPage extends AndroidActions {
+	//comment added from feature2
 	AndroidDriver driver;
 
 	public CartPage(AndroidDriver driver) {
