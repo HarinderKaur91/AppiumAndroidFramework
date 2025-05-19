@@ -34,7 +34,6 @@ public abstract class AppiumUtils {
 				.withIPAddress(ipAddress).usingPort(port).build();
 		service.start();
 		return service;
-
 	}
 
 	public Double getFormattedAmount(String amount) {
