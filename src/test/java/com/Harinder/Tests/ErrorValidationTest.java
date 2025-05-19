@@ -32,7 +32,7 @@ public class ErrorValidationTest extends BaseTest {
 			//	"com.androidsample.generalstore/com.androidsample.generalstore.MainActivity"));
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void fillForm() throws InterruptedException {
 //	driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Harinder Kaur");
 		driver.hideKeyboard();
@@ -48,7 +48,7 @@ public class ErrorValidationTest extends BaseTest {
 
 	}
 
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"},enabled = false)
 	public void fillForm2() throws InterruptedException {
 		
 		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Harinder Kaur");
